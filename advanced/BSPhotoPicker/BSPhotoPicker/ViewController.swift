@@ -45,8 +45,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let imagePicker = ImagePickerController()
         imagePicker.settings.selection.max = 5
         imagePicker.settings.fetch.assets.supportedMediaTypes = [.image]
+        imagePicker.settings.theme.selectionStyle = .numbered
+        imagePicker.settings.theme.selectionFillColor = .systemRed
+        imagePicker.settings.theme.selectionStrokeColor = .white
                 
-                
+        imagePicker.modalPresentationStyle = .fullScreen
+        
         presentImagePicker(imagePicker, select: { (asset) in
             // User selected an asset. Do something with it. Perhaps begin processing/upload?
         }, deselect: { (asset) in
