@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		ED5C8941267EED2E00F3B873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5C893F267EED2E00F3B873 /* Main.storyboard */; };
 		ED5C8943267EED2F00F3B873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5C8942267EED2F00F3B873 /* Assets.xcassets */; };
 		ED5C8946267EED2F00F3B873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5C8944267EED2F00F3B873 /* LaunchScreen.storyboard */; };
+		ED5C894E267EF47300F3B873 /* CVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C894D267EF47300F3B873 /* CVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		ED5C8942267EED2F00F3B873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED5C8945267EED2F00F3B873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED5C8947267EED2F00F3B873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED5C894D267EF47300F3B873 /* CVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,6 @@
 				6A24C0DCF651107E6C4387C0 /* Pods-BSPhotoPicker.debug.xcconfig */,
 				5464A5CA4AFD88F266A05347 /* Pods-BSPhotoPicker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +89,7 @@
 				ED5C8942267EED2F00F3B873 /* Assets.xcassets */,
 				ED5C8944267EED2F00F3B873 /* LaunchScreen.storyboard */,
 				ED5C8947267EED2F00F3B873 /* Info.plist */,
+				ED5C894D267EF47300F3B873 /* CVC.swift */,
 			);
 			path = BSPhotoPicker;
 			sourceTree = "<group>";
@@ -206,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED5C894E267EF47300F3B873 /* CVC.swift in Sources */,
 				ED5C893E267EED2E00F3B873 /* ViewController.swift in Sources */,
 				ED5C893A267EED2E00F3B873 /* AppDelegate.swift in Sources */,
 				ED5C893C267EED2E00F3B873 /* SceneDelegate.swift in Sources */,
@@ -357,6 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 633J345B62;
 				INFOPLIST_FILE = BSPhotoPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -376,6 +380,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 633J345B62;
 				INFOPLIST_FILE = BSPhotoPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
