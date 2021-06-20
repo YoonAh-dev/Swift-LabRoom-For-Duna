@@ -6,12 +6,12 @@
 //
 
 import UIKit
+import FSCalendar
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 
