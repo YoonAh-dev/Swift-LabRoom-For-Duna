@@ -84,7 +84,7 @@ extension ViewController {
     //이벤트 표시 개수
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
         if self.events.contains(date) {
-            return 1
+            return 6
         } else {
             return 0
         }
