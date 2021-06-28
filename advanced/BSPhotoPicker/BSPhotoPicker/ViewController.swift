@@ -50,7 +50,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         imagePicker.settings.theme.selectionStrokeColor = .white
                 
         imagePicker.modalPresentationStyle = .fullScreen
-        
         presentImagePicker(imagePicker, select: { (asset) in
             // User selected an asset. Do something with it. Perhaps begin processing/upload?
         }, deselect: { (asset) in
