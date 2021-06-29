@@ -44,7 +44,7 @@ class CustomHeaderView: UIView {
         widthConstraint = imageView.widthAnchor.constraint(equalToConstant: 135)
         widthConstraint.isActive = true
         
-        topConstraint = imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 204)
+        topConstraint = imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 166)
         topConstraint.isActive = true
         
         backTop = colorView.topAnchor.constraint(equalTo: self.topAnchor)
@@ -53,10 +53,12 @@ class CustomHeaderView: UIView {
         backWidth = colorView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width)
         backWidth.isActive = true
         
+        backHeight = colorView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width)
+        backHeight.isActive = true
+            
         let constraints:[NSLayoutConstraint] = [
             imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            colorView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            colorView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            colorView.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         ]
         NSLayoutConstraint.activate(constraints)
         

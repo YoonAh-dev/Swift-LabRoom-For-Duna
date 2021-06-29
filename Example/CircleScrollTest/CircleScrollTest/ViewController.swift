@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         headerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(headerView)
         
-        headerHeightConstraint = headerView.heightAnchor.constraint(equalToConstant: 496)
+        headerHeightConstraint = headerView.heightAnchor.constraint(equalToConstant: 375)
         headerHeightConstraint.isActive = true
         
         let constraints:[NSLayoutConstraint] = [
@@ -55,24 +55,20 @@ class ViewController: UIViewController {
 
 extension ViewController:UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y < 0 && self.headerHeightConstraint.constant < 496{
+        if scrollView.contentOffset.y < 0 && self.headerHeightConstraint.constant < 375{
             self.headerHeightConstraint.constant += abs(scrollView.contentOffset.y)
             self.headerView.heightConstraint.constant += abs(scrollView.contentOffset.y)/2
             self.headerView.widthConstraint.constant += abs(scrollView.contentOffset.y)/2
             self.headerView.topConstraint.constant += abs(scrollView.contentOffset.y)/2
             
-            self.headerView.backWidth.constant += abs(scrollView.contentOffset.y)*1.3
-            self.headerView.backTop.constant -= abs(scrollView.contentOffset.y)/3
+            self.headerView.backWidth.constant += abs(scrollView.contentOffset.y)*2.2
+            self.headerView.backHeight.constant += abs(scrollView.contentOffset.y)*2.3
+            self.headerView.backTop.constant -= abs(scrollView.contentOffset.y)
             
-            if self.headerHeightConstraint.constant > 450 && self.headerView.colorView.layer.cornerRadius > 0 {
-                self.headerView.colorView.layer.cornerRadius -= 50
+            if self.headerHeightConstraint.constant > 370 && self.headerView.colorView.layer.cornerRadius > 0 {
+                self.headerView.colorView.layer.cornerRadius -= 10
             } else {
-                let offset = self.headerView.backWidth.constant/2
-                if offset < 50 {
-                    self.headerView.colorView.layer.cornerRadius = 50
-                } else {
-                    self.headerView.colorView.layer.cornerRadius = offset
-                }
+                self.headerView.colorView.layer.cornerRadius = self.headerView.backWidth.constant/2
             }
             
             if self.headerView.heightConstraint.constant > 116 {
@@ -83,8 +79,8 @@ extension ViewController:UIScrollViewDelegate {
                 headerView.widthConstraint.constant = 135
             }
             
-            if self.headerView.topConstraint.constant > 204 {
-                headerView.topConstraint.constant = 204
+            if self.headerView.topConstraint.constant > 166 {
+                headerView.topConstraint.constant = 166
             }
             
             if self.headerView.backWidth.constant > UIScreen.main.bounds.size.width {
@@ -92,53 +88,46 @@ extension ViewController:UIScrollViewDelegate {
                 self.headerView.colorView.layer.cornerRadius = 0
             }
             
+            if self.headerView.backHeight.constant > UIScreen.main.bounds.size.width {
+                self.headerView.backHeight.constant = UIScreen.main.bounds.size.width
+            }
+            
             if self.headerView.backTop.constant < 0 {
                 self.headerView.backTop.constant = 0
             }
             
-        } else if scrollView.contentOffset.y > 0 && self.headerHeightConstraint.constant >= 199 {
+        } else if scrollView.contentOffset.y > 0 && self.headerHeightConstraint.constant >= 239 {
             self.headerHeightConstraint.constant -= scrollView.contentOffset.y/15
             
-            self.headerView.heightConstraint.constant -= scrollView.contentOffset.y/70
-            self.headerView.widthConstraint.constant -= scrollView.contentOffset.y/70
-            self.headerView.topConstraint.constant -= scrollView.contentOffset.y/50
+            self.headerView.heightConstraint.constant -= scrollView.contentOffset.y/33
+            self.headerView.widthConstraint.constant -= scrollView.contentOffset.y/33
+            self.headerView.topConstraint.constant -= scrollView.contentOffset.y/80
         
-            print(self.headerHeightConstraint.constant)
-            if self.headerHeightConstraint.constant < 199 {
-                self.headerHeightConstraint.constant = 199
+            if self.headerHeightConstraint.constant <= 239 {
+                self.headerHeightConstraint.constant = 239
                 
-                self.headerView.heightConstraint.constant = 58
-                self.headerView.widthConstraint.constant = 67
-                self.headerView.topConstraint.constant = 116
+                self.headerView.heightConstraint.constant = 60
+                self.headerView.widthConstraint.constant = 69
+                self.headerView.topConstraint.constant = 137
                 
-                self.headerView.backWidth.constant = 100
-                self.headerView.backTop.constant = 95
-                self.headerView.colorView.layer.cornerRadius = 50
-            } else if self.headerHeightConstraint.constant < 490 {
-                self.headerView.backWidth.constant -= scrollView.contentOffset.y/16
-                self.headerView.backTop.constant += scrollView.contentOffset.y/50
+                self.headerView.backHeight.constant = 105
+                self.headerView.backWidth.constant = 105
+                self.headerView.backTop.constant = 114
+                self.headerView.colorView.layer.cornerRadius = 52.5
+            } else if self.headerHeightConstraint.constant < 359 {
+                self.headerView.backWidth.constant -= scrollView.contentOffset.y/6.3
+                self.headerView.backHeight.constant = headerView.backWidth.constant
+                self.headerView.backTop.constant += scrollView.contentOffset.y/15.5
                 
                 let offset = self.headerView.backWidth.constant/2
-//                print(offset)
-                if offset < 50 {
-                    self.headerView.colorView.layer.cornerRadius = 50
+                if offset < 52.5 {
+                    self.headerView.colorView.layer.cornerRadius = 52.5
                 } else {
                     self.headerView.colorView.layer.cornerRadius = offset
                 }
             } else {
-                self.headerView.colorView.layer.cornerRadius += 10
+                self.headerView.colorView.layer.cornerRadius += 7.2
             }
-            
-//            if self.headerView.colorView.layer.cornerRadius == self.headerHeightConstraint.constant/2 {
-//                self.headerView.colorView.layer.cornerRadius = self.headerView.heightConstraint.constant/2
-//            } else {
-//                if self.headerView.colorView.layer.cornerRadius > 50 {
-//                    self.headerView.colorView.layer.cornerRadius = 50
-//                } else {
-//
-//                }
-//
-//            }
         }
     }
     
