@@ -143,43 +143,24 @@ class PresentVC: UIViewController {
     }
 
     private func hideCardAndGoBack() {
-        // ensure there's no pending layout changes before animation runs
-        self.view.layoutIfNeeded()
-        
-        // set the new top constraint value for card view
-        // card view won't move down just yet, we need to call layoutIfNeeded()
-        // to tell the app to refresh the frame/position of card view
+
         if let safeAreaHeight = UIApplication.shared.keyWindow?.safeAreaLayoutGuide.layoutFrame.size.height,
           let bottomPadding = UIApplication.shared.keyWindow?.safeAreaInsets.bottom {
           
-            // move the card view to bottom of screen
-            cardViewTopConstraint.constant = safeAreaHeight + bottomPadding
+            cardViewTopConstraint.constant = (safeAreaHeight + bottomPadding) / 1.2
+            cardPanStartingTopConstant = cardViewTopConstraint.constant
+            
+            titleLabel.text = "Bottom"
         }
         
-        // move card down to bottom
+        // move card up from bottom
         // create a new property animator
-        let hideCard = UIViewPropertyAnimator(duration: 0.25, curve: .easeIn, animations: {
-            self.view.layoutIfNeeded()
-        })
-        
-        // hide dimmer view
-        // this will animate the dimmerView alpha together with the card move down animation
-        hideCard.addAnimations {
-            self.view.alpha = 0.0
-        }
-        
-        // when the animation completes, (position == .end means the animation has ended)
-        // dismiss this view controller (if there is a presenting view controller)
-        hideCard.addCompletion({ position in
-            if position == .end {
-                if(self.presentingViewController != nil) {
-                    self.dismiss(animated: false, completion: nil)
-                }
-            }
+        let showCard = UIViewPropertyAnimator(duration: 0.25, curve: .easeIn, animations: {
+          self.view.layoutIfNeeded()
         })
         
         // run the animation
-        hideCard.startAnimation()
+        showCard.startAnimation()
     }
     
     private func dimAlphaWithCardTopConstraint(value: CGFloat) -> CGFloat {
