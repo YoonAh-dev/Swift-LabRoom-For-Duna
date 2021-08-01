@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBAction func tappedButton(_ sender: Any) {
         guard let vc = storyboard?.instantiateViewController(identifier: "PresentVC") as? PresentVC else { return }
         vc.modalPresentationStyle = .overCurrentContext
-        present(vc, animated: true, completion: nil)
+        present(vc, animated: false, completion: nil)
     }
     
 }

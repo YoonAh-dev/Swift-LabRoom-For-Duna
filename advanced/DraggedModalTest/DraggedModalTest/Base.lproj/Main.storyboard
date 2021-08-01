@@ -40,13 +40,29 @@
                     <view key="view" contentMode="scaleToFill" id="ugV-bd-HaS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDI-a8-Nr3">
+                                <rect key="frame" x="0.0" y="74" width="414" height="822"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4zV-bH-ujR"/>
                         <color key="backgroundColor" white="0.0" alpha="0.79716996957134723" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kDI-a8-Nr3" firstAttribute="top" secondItem="4zV-bH-ujR" secondAttribute="top" constant="30" id="LJ1-2R-amv"/>
+                            <constraint firstAttribute="bottom" secondItem="kDI-a8-Nr3" secondAttribute="bottom" id="kF3-8g-8yN"/>
+                            <constraint firstItem="4zV-bH-ujR" firstAttribute="trailing" secondItem="kDI-a8-Nr3" secondAttribute="trailing" id="wIL-C0-8dF"/>
+                            <constraint firstItem="kDI-a8-Nr3" firstAttribute="leading" secondItem="4zV-bH-ujR" secondAttribute="leading" id="yLd-vv-jJp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardView" destination="kDI-a8-Nr3" id="Udm-lu-BOc"/>
+                        <outlet property="cardViewTopConstraint" destination="LJ1-2R-amv" id="l2h-V9-VNw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uOn-dG-yAU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="116"/>
+            <point key="canvasLocation" x="1044.9275362318842" y="115.84821428571428"/>
         </scene>
     </scenes>
     <resources>
