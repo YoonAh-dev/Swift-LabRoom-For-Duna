@@ -26,7 +26,8 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.76007521333116479" green="0.76007521333116479" blue="0.76007521333116479" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="0.79716996957134723" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -43,7 +44,19 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDI-a8-Nr3">
                                 <rect key="frame" x="0.0" y="74" width="414" height="822"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4D-7d-MMC">
+                                        <rect key="frame" x="25" y="50" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="h4D-7d-MMC" firstAttribute="top" secondItem="kDI-a8-Nr3" secondAttribute="top" constant="50" id="7Zw-B6-PF9"/>
+                                    <constraint firstItem="h4D-7d-MMC" firstAttribute="leading" secondItem="kDI-a8-Nr3" secondAttribute="leading" constant="25" id="rD3-mQ-eKs"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4zV-bH-ujR"/>
@@ -58,6 +71,7 @@
                     <connections>
                         <outlet property="cardView" destination="kDI-a8-Nr3" id="Udm-lu-BOc"/>
                         <outlet property="cardViewTopConstraint" destination="LJ1-2R-amv" id="l2h-V9-VNw"/>
+                        <outlet property="titleLabel" destination="h4D-7d-MMC" id="jay-dV-4bw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uOn-dG-yAU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

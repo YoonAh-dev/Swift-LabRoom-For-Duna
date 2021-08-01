@@ -11,6 +11,7 @@ class PresentVC: UIViewController {
     enum CardViewState {
         case expanded
         case normal
+        case bottom
     }
 
     // default card view state is normal
@@ -22,6 +23,7 @@ class PresentVC: UIViewController {
     
     @IBOutlet weak var cardView: UIView!
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var cardViewTopConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -49,6 +51,10 @@ class PresentVC: UIViewController {
         viewPan.delaysTouchesEnded = false
 
         self.view.addGestureRecognizer(viewPan)
+        
+        titleLabel.text = "Total"
+        
+        view.backgroundColor = .black.withAlphaComponent(0)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,8 +77,10 @@ class PresentVC: UIViewController {
          if atState == .expanded {
             // if state is expanded, top constraint is 30pt away from safe area top
             cardViewTopConstraint.constant = 30.0
-         } else {
+         } else if atState == .normal {
             cardViewTopConstraint.constant = (safeAreaHeight + bottomPadding) / 2.0
+         } else {
+            cardViewTopConstraint.constant = (safeAreaHeight + bottomPadding) / 1.2
          }
          
         cardPanStartingTopConstant = cardViewTopConstraint.constant
@@ -83,12 +91,6 @@ class PresentVC: UIViewController {
        let showCard = UIViewPropertyAnimator(duration: 0.25, curve: .easeIn, animations: {
          self.view.layoutIfNeeded()
        })
-       
-       // show dimmer view
-       // this will animate the dimmerView alpha together with the card move up animation
-       showCard.addAnimations {
-        self.view.backgroundColor = .black.withAlphaComponent(0.7)
-       }
        
        // run the animation
        showCard.startAnimation()
@@ -112,9 +114,6 @@ class PresentVC: UIViewController {
           if self.cardPanStartingTopConstant + translation.y > 30.0 {
             self.cardViewTopConstraint.constant = self.cardPanStartingTopConstant + translation.y
           }
-          
-          // change the dimmer view alpha based on how much user has dragged
-            view.backgroundColor = .black.withAlphaComponent(dimAlphaWithCardTopConstraint(value: self.cardViewTopConstraint.constant))
 
         case .ended:
           if velocity.y > 1500.0 {
@@ -126,9 +125,14 @@ class PresentVC: UIViewController {
             let bottomPadding = UIApplication.shared.keyWindow?.safeAreaInsets.bottom {
             
             if self.cardViewTopConstraint.constant < (safeAreaHeight + bottomPadding) * 0.25 {
-              showCard(atState: .expanded)
-            } else if self.cardViewTopConstraint.constant < (safeAreaHeight) - 70 {
-              showCard(atState: .normal)
+                showCard(atState: .expanded)
+                titleLabel.text = "My Progress"
+            } else if self.cardViewTopConstraint.constant < (safeAreaHeight) - 250 {
+                showCard(atState: .normal)
+                titleLabel.text = "Total"
+            } else if cardViewTopConstraint.constant < (safeAreaHeight) - 70 {
+                showCard(atState: .bottom)
+                titleLabel.text = "Bottom"
             } else {
               hideCardAndGoBack()
             }
