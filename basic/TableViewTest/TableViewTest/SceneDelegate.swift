@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  CircleScrollTest
+//  TableViewTest
 //
-//  Created by SHIN YOON AH on 2021/06/29.
+//  Created by SHIN YOON AH on 2021/07/25.
 //
 
 import UIKit
