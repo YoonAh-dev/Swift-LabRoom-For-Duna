@@ -19,7 +19,7 @@ class PresentVC: UIViewController {
 
     // to store the card view top constraint value before the dragging start
     // default is 30 pt from safe area top
-    var cardPanStartingTopConstant : CGFloat = 30.0
+    
     
     @IBOutlet weak var cardView: UIView!
     
