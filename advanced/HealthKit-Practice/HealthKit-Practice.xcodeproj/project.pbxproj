@@ -15,6 +15,12 @@
 		ED22C680273A219500036CF7 /* HealthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C67F273A219500036CF7 /* HealthData.swift */; };
 		ED22C682273A229500036CF7 /* HealthKitSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C681273A229500036CF7 /* HealthKitSupport.swift */; };
 		ED22C684273A301E00036CF7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C683273A301E00036CF7 /* WelcomeViewController.swift */; };
+		ED22C686273A380800036CF7 /* WeeklyQuantitySampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C685273A380800036CF7 /* WeeklyQuantitySampleTableViewController.swift */; };
+		ED22C688273A385000036CF7 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C687273A385000036CF7 /* DataTableViewController.swift */; };
+		ED22C68A273A396E00036CF7 /* HealthDataTypeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C689273A396E00036CF7 /* HealthDataTypeValue.swift */; };
+		ED22C68C273A3AA000036CF7 /* DataTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C68B273A3AA000036CF7 /* DataTypeTableViewCell.swift */; };
+		ED22C68E273A3B2B00036CF7 /* EmptyDataBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C68D273A3B2B00036CF7 /* EmptyDataBackgroundView.swift */; };
+		ED22C690273A43A800036CF7 /* HealthKitSupport+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C68F273A43A800036CF7 /* HealthKitSupport+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		ED22C67F273A219500036CF7 /* HealthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthData.swift; sourceTree = "<group>"; };
 		ED22C681273A229500036CF7 /* HealthKitSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSupport.swift; sourceTree = "<group>"; };
 		ED22C683273A301E00036CF7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		ED22C685273A380800036CF7 /* WeeklyQuantitySampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyQuantitySampleTableViewController.swift; sourceTree = "<group>"; };
+		ED22C687273A385000036CF7 /* DataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
+		ED22C689273A396E00036CF7 /* HealthDataTypeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataTypeValue.swift; sourceTree = "<group>"; };
+		ED22C68B273A3AA000036CF7 /* DataTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeTableViewCell.swift; sourceTree = "<group>"; };
+		ED22C68D273A3B2B00036CF7 /* EmptyDataBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataBackgroundView.swift; sourceTree = "<group>"; };
+		ED22C68F273A43A800036CF7 /* HealthKitSupport+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthKitSupport+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +91,7 @@
 			children = (
 				ED22C67D273A1BAB00036CF7 /* SplashScreenViewController.swift */,
 				ED22C683273A301E00036CF7 /* WelcomeViewController.swift */,
+				ED22C685273A380800036CF7 /* WeeklyQuantitySampleTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -86,6 +99,7 @@
 		ED22C673273976C600036CF7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				ED22C68B273A3AA000036CF7 /* DataTypeTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -93,6 +107,7 @@
 		ED22C674273976CB00036CF7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ED22C689273A396E00036CF7 /* HealthDataTypeValue.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,6 +148,7 @@
 		ED22C679273976EB00036CF7 /* Table View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ED22C687273A385000036CF7 /* DataTableViewController.swift */,
 			);
 			path = "Table View Controller";
 			sourceTree = "<group>";
@@ -140,6 +156,7 @@
 		ED22C67A273976FA00036CF7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ED22C68D273A3B2B00036CF7 /* EmptyDataBackgroundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				ED22C681273A229500036CF7 /* HealthKitSupport.swift */,
+				ED22C68F273A43A800036CF7 /* HealthKitSupport+String.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -231,11 +249,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED22C68A273A396E00036CF7 /* HealthDataTypeValue.swift in Sources */,
 				ED22C65F273974C400036CF7 /* AppDelegate.swift in Sources */,
+				ED22C688273A385000036CF7 /* DataTableViewController.swift in Sources */,
 				ED22C661273974C400036CF7 /* SceneDelegate.swift in Sources */,
 				ED22C67E273A1BAB00036CF7 /* SplashScreenViewController.swift in Sources */,
 				ED22C684273A301E00036CF7 /* WelcomeViewController.swift in Sources */,
 				ED22C682273A229500036CF7 /* HealthKitSupport.swift in Sources */,
+				ED22C68E273A3B2B00036CF7 /* EmptyDataBackgroundView.swift in Sources */,
+				ED22C68C273A3AA000036CF7 /* DataTypeTableViewCell.swift in Sources */,
+				ED22C690273A43A800036CF7 /* HealthKitSupport+String.swift in Sources */,
+				ED22C686273A380800036CF7 /* WeeklyQuantitySampleTableViewController.swift in Sources */,
 				ED22C680273A219500036CF7 /* HealthData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
