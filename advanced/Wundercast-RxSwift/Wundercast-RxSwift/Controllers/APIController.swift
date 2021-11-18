@@ -37,8 +37,10 @@ class APIController {
     private let apiKey = "b96003f4589f56458893a32ae638a485"
     private let baseURL = URL(string: "http://api.openweathermap.org/data/2.5")!
     
+    // MARK: - Initalizer
+    
     init() {
-        Logging.URLRequests = { request in
+        URLSession.rx.shouldLogRequest = { request in
             return true
         }
     }
@@ -85,7 +87,8 @@ class APIController {
         
         let session = URLSession.shared
         
-        return session.rx.data(request: request).map { JSON(data: $0) }
+        return session.rx.data(request: request)
+                         .compactMap { try? JSON(data: $0) }
     }
 }
 
