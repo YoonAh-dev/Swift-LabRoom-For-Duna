@@ -12,6 +12,22 @@ import SwiftyJSON
 
 class APIController {
     
+    // MARK: - Weather
+    
+    struct Weather {
+        let cityName: String
+        let temperature: Int
+        let humidity: Int
+        let icon: String
+        
+        static let empty = Weather(
+            cityName: "Unknown",
+            temperature: -1000,
+            humidity: 0,
+            icon: iconNameToChar(icon: "e")
+        )
+    }
+    
     // MARK: - Shared instance
     
     static var shared = APIController()
@@ -24,6 +40,18 @@ class APIController {
     init() {
         Logging.URLRequests = { request in
             return true
+        }
+    }
+    
+    //MARK: - API Calls
+    
+    func currentWeather(city: String) -> Observable<Weather> {
+        return buildRequest(pathComponent: "weather", params: [("q", city)]).map() { json in
+            return Weather(
+                cityName: json["name"].string ?? "Unknown",
+                temperature: json["main"]["temp"].int ?? -1000,
+                humidity: json["main"]["humidity"].int  ?? 0,
+                icon: iconNameToChar(icon: json["weather"][0]["icon"].string ?? "e"))
         }
     }
     
