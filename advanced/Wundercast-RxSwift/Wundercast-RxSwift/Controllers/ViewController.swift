@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        firstExample()
+        fourthExample()
     }
     
     override func viewDidLayoutSubviews() {
