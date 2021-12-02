@@ -551,7 +551,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Action/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Action;
+				INFOPLIST_KEY_CFBundleDisplayName = YoonAhAction;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -575,7 +575,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Action/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Action;
+				INFOPLIST_KEY_CFBundleDisplayName = YoonAhAction;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -599,7 +599,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Share/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Share;
+				INFOPLIST_KEY_CFBundleDisplayName = YoonAhShare;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -623,7 +623,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Share/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Share;
+				INFOPLIST_KEY_CFBundleDisplayName = YoonAhShare;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
