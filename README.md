@@ -9,6 +9,7 @@
 |Dragged-bottom Card Modal|08/01|[📃](https://github.com/YoonAh-dev/Swift-LabRoom-For-Duna/tree/main/advanced/DraggedModalTest)| - Present half Modal 커스텀 해보기<br/> - 전체, 중간, 바텀에서 다 다른 Label를 띄우도록 함<br/>
 |Typing Animation|08/07|[⌨️](https://github.com/YoonAh-dev/Swift-LabRoom-For-Duna/tree/main/advanced/TypingAnimationTest)| - 게임처럼 Typing되는 애니메이션 구현<br/> - DispatchQueue 사용해서 구현 <br/>
 |Local Notification|11/25|[🕰](https://github.com/YoonAh-dev/Swift-LabRoom-For-Duna/tree/main/advanced/LocalNotification)| - Local Notification 구현 앱 <br/> - UserNotifications를 임포트해서 로컬알림 구현 <br/> - [Example Page](https://onelife2live.tistory.com/33) <br/>
+|ReSwift|12/03|[➡](https://github.com/YoonAh-dev/Swift-LabRoom-For-Duna/tree/main/advanced/Counting-ReSwift)| - [ReSwift](https://github.com/ReSwift/ReSwift) 라이브러리를 사용해서 단방향 데이터 흐름 구현 <br/> - 버튼을 누르면 숫자가 올라가고 내려가는 간단한 앱 <br/> - [ReSwift에서 제공해주는 CounterExample](https://github.com/ReSwift/CounterExample) <br/>
 
 ### Apple Document Example
 | feature |date |link |description |
