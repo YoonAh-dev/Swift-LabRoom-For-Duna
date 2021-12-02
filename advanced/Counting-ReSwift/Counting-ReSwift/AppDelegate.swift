@@ -6,6 +6,12 @@
 //
 
 import UIKit
+import ReSwift
+
+let mainStore = Store<AppState>(
+    reducer: counterReducer,
+    state: nil
+)
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

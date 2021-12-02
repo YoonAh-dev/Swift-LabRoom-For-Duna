@@ -14,6 +14,9 @@
 		EDE3E0AB275902E90062510F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE3E0A9275902E90062510F /* Main.storyboard */; };
 		EDE3E0AD275902EB0062510F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE3E0AC275902EB0062510F /* Assets.xcassets */; };
 		EDE3E0B0275902EB0062510F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE3E0AE275902EB0062510F /* LaunchScreen.storyboard */; };
+		EDE3E0BB275905C10062510F /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE3E0BA275905C10062510F /* Actions.swift */; };
+		EDE3E0BD275905FF0062510F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE3E0BC275905FF0062510F /* AppState.swift */; };
+		EDE3E0BF2759065F0062510F /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE3E0BE2759065F0062510F /* CounterReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		EDE3E0AC275902EB0062510F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDE3E0AF275902EB0062510F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDE3E0B1275902EB0062510F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE3E0BA275905C10062510F /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		EDE3E0BC275905FF0062510F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		EDE3E0BE2759065F0062510F /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 		EDE3E0A2275902E90062510F /* Counting-ReSwift */ = {
 			isa = PBXGroup;
 			children = (
+				EDE3E0B9275904730062510F /* State */,
+				EDE3E0B82759046E0062510F /* Reducers */,
+				EDE3E0B7275904660062510F /* Actions */,
 				EDE3E0A3275902E90062510F /* AppDelegate.swift */,
 				EDE3E0A5275902E90062510F /* SceneDelegate.swift */,
 				EDE3E0A7275902E90062510F /* ViewController.swift */,
@@ -82,13 +91,36 @@
 			path = "Counting-ReSwift";
 			sourceTree = "<group>";
 		};
+		EDE3E0B7275904660062510F /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				EDE3E0BA275905C10062510F /* Actions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		EDE3E0B82759046E0062510F /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				EDE3E0BE2759065F0062510F /* CounterReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		EDE3E0B9275904730062510F /* State */ = {
+			isa = PBXGroup;
+			children = (
+				EDE3E0BC275905FF0062510F /* AppState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
 		F9A1329F8677EAE25A9F18A9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				D7080B2486BA746653C996B4 /* Pods-Counting-ReSwift.debug.xcconfig */,
 				4CB8B671BDFB084FF715A3E3 /* Pods-Counting-ReSwift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,6 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE3E0A8275902E90062510F /* ViewController.swift in Sources */,
+				EDE3E0BF2759065F0062510F /* CounterReducer.swift in Sources */,
+				EDE3E0BD275905FF0062510F /* AppState.swift in Sources */,
+				EDE3E0BB275905C10062510F /* Actions.swift in Sources */,
 				EDE3E0A4275902E90062510F /* AppDelegate.swift in Sources */,
 				EDE3E0A6275902E90062510F /* SceneDelegate.swift in Sources */,
 			);
