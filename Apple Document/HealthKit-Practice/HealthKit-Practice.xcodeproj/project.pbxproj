@@ -22,6 +22,12 @@
 		ED22C68E273A3B2B00036CF7 /* EmptyDataBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C68D273A3B2B00036CF7 /* EmptyDataBackgroundView.swift */; };
 		ED22C690273A43A800036CF7 /* HealthKitSupport+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C68F273A43A800036CF7 /* HealthKitSupport+String.swift */; };
 		ED800BA6275CD8B60003E315 /* HealthDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BA5275CD8B60003E315 /* HealthDataTableViewController.swift */; };
+		ED800BA8275CF3C30003E315 /* ChartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BA7275CF3C30003E315 /* ChartTableViewController.swift */; };
+		ED800BAB275CF6820003E315 /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = ED800BAA275CF6820003E315 /* CareKit */; };
+		ED800BAD275CF6820003E315 /* CareKitFHIR in Frameworks */ = {isa = PBXBuildFile; productRef = ED800BAC275CF6820003E315 /* CareKitFHIR */; };
+		ED800BAF275CF6820003E315 /* CareKitStore in Frameworks */ = {isa = PBXBuildFile; productRef = ED800BAE275CF6820003E315 /* CareKitStore */; };
+		ED800BB1275CF6820003E315 /* CareKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = ED800BB0275CF6820003E315 /* CareKitUI */; };
+		ED800BB3275CFB1F0003E315 /* ChartViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BB2275CFB1F0003E315 /* ChartViewStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,8 @@
 		ED22C68D273A3B2B00036CF7 /* EmptyDataBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataBackgroundView.swift; sourceTree = "<group>"; };
 		ED22C68F273A43A800036CF7 /* HealthKitSupport+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthKitSupport+String.swift"; sourceTree = "<group>"; };
 		ED800BA5275CD8B60003E315 /* HealthDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataTableViewController.swift; sourceTree = "<group>"; };
+		ED800BA7275CF3C30003E315 /* ChartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTableViewController.swift; sourceTree = "<group>"; };
+		ED800BB2275CFB1F0003E315 /* ChartViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED800BAB275CF6820003E315 /* CareKit in Frameworks */,
+				ED800BAD275CF6820003E315 /* CareKitFHIR in Frameworks */,
+				ED800BB1275CF6820003E315 /* CareKitUI in Frameworks */,
+				ED800BAF275CF6820003E315 /* CareKitStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +164,7 @@
 			children = (
 				ED22C687273A385000036CF7 /* DataTableViewController.swift */,
 				ED800BA5275CD8B60003E315 /* HealthDataTableViewController.swift */,
+				ED800BA7275CF3C30003E315 /* ChartTableViewController.swift */,
 			);
 			path = "Table View Controller";
 			sourceTree = "<group>";
@@ -160,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				ED22C68D273A3B2B00036CF7 /* EmptyDataBackgroundView.swift */,
+				ED800BB2275CFB1F0003E315 /* ChartViewStyle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,6 +212,12 @@
 			dependencies = (
 			);
 			name = "HealthKit-Practice";
+			packageProductDependencies = (
+				ED800BAA275CF6820003E315 /* CareKit */,
+				ED800BAC275CF6820003E315 /* CareKitFHIR */,
+				ED800BAE275CF6820003E315 /* CareKitStore */,
+				ED800BB0275CF6820003E315 /* CareKitUI */,
+			);
 			productName = "HealthKit-Practice";
 			productReference = ED22C65B273974C400036CF7 /* HealthKit-Practice.app */;
 			productType = "com.apple.product-type.application";
@@ -226,6 +246,9 @@
 				Base,
 			);
 			mainGroup = ED22C652273974C400036CF7;
+			packageReferences = (
+				ED800BA9275CF6820003E315 /* XCRemoteSwiftPackageReference "CareKit" */,
+			);
 			productRefGroup = ED22C65C273974C400036CF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -253,7 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED22C68A273A396E00036CF7 /* HealthDataTypeValue.swift in Sources */,
+				ED800BB3275CFB1F0003E315 /* ChartViewStyle.swift in Sources */,
 				ED22C65F273974C400036CF7 /* AppDelegate.swift in Sources */,
+				ED800BA8275CF3C30003E315 /* ChartTableViewController.swift in Sources */,
 				ED22C688273A385000036CF7 /* DataTableViewController.swift in Sources */,
 				ED800BA6275CD8B60003E315 /* HealthDataTableViewController.swift in Sources */,
 				ED22C661273974C400036CF7 /* SceneDelegate.swift in Sources */,
@@ -474,6 +499,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED800BA9275CF6820003E315 /* XCRemoteSwiftPackageReference "CareKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/carekit-apple/CareKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED800BAA275CF6820003E315 /* CareKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED800BA9275CF6820003E315 /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKit;
+		};
+		ED800BAC275CF6820003E315 /* CareKitFHIR */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED800BA9275CF6820003E315 /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKitFHIR;
+		};
+		ED800BAE275CF6820003E315 /* CareKitStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED800BA9275CF6820003E315 /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKitStore;
+		};
+		ED800BB0275CF6820003E315 /* CareKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED800BA9275CF6820003E315 /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKitUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ED22C653273974C400036CF7 /* Project object */;
 }
