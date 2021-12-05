@@ -28,6 +28,10 @@
 		ED800BAF275CF6820003E315 /* CareKitStore in Frameworks */ = {isa = PBXBuildFile; productRef = ED800BAE275CF6820003E315 /* CareKitStore */; };
 		ED800BB1275CF6820003E315 /* CareKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = ED800BB0275CF6820003E315 /* CareKitUI */; };
 		ED800BB3275CFB1F0003E315 /* ChartViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BB2275CFB1F0003E315 /* ChartViewStyle.swift */; };
+		ED800BB5275CFF5D0003E315 /* HealthQueryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BB4275CFF5D0003E315 /* HealthQueryTableViewController.swift */; };
+		ED800BB7275D01BA0003E315 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BB6275D01BA0003E315 /* Network.swift */; };
+		ED800BB9275D06210003E315 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BB8275D06210003E315 /* ServerResponse.swift */; };
+		ED800BBB275D0C3A0003E315 /* CareKitSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BBA275D0C3A0003E315 /* CareKitSupport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		ED800BA5275CD8B60003E315 /* HealthDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataTableViewController.swift; sourceTree = "<group>"; };
 		ED800BA7275CF3C30003E315 /* ChartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTableViewController.swift; sourceTree = "<group>"; };
 		ED800BB2275CFB1F0003E315 /* ChartViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewStyle.swift; sourceTree = "<group>"; };
+		ED800BB4275CFF5D0003E315 /* HealthQueryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthQueryTableViewController.swift; sourceTree = "<group>"; };
+		ED800BB6275D01BA0003E315 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		ED800BB8275D06210003E315 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		ED800BBA275D0C3A0003E315 /* CareKitSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareKitSupport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				ED22C689273A396E00036CF7 /* HealthDataTypeValue.swift */,
+				ED800BB8275D06210003E315 /* ServerResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -130,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				ED22C67F273A219500036CF7 /* HealthData.swift */,
+				ED800BB6275D01BA0003E315 /* Network.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -165,6 +175,7 @@
 				ED22C687273A385000036CF7 /* DataTableViewController.swift */,
 				ED800BA5275CD8B60003E315 /* HealthDataTableViewController.swift */,
 				ED800BA7275CF3C30003E315 /* ChartTableViewController.swift */,
+				ED800BB4275CFF5D0003E315 /* HealthQueryTableViewController.swift */,
 			);
 			path = "Table View Controller";
 			sourceTree = "<group>";
@@ -183,6 +194,7 @@
 			children = (
 				ED22C681273A229500036CF7 /* HealthKitSupport.swift */,
 				ED22C68F273A43A800036CF7 /* HealthKitSupport+String.swift */,
+				ED800BBA275D0C3A0003E315 /* CareKitSupport.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -277,15 +289,19 @@
 			files = (
 				ED22C68A273A396E00036CF7 /* HealthDataTypeValue.swift in Sources */,
 				ED800BB3275CFB1F0003E315 /* ChartViewStyle.swift in Sources */,
+				ED800BB5275CFF5D0003E315 /* HealthQueryTableViewController.swift in Sources */,
 				ED22C65F273974C400036CF7 /* AppDelegate.swift in Sources */,
+				ED800BBB275D0C3A0003E315 /* CareKitSupport.swift in Sources */,
 				ED800BA8275CF3C30003E315 /* ChartTableViewController.swift in Sources */,
 				ED22C688273A385000036CF7 /* DataTableViewController.swift in Sources */,
 				ED800BA6275CD8B60003E315 /* HealthDataTableViewController.swift in Sources */,
 				ED22C661273974C400036CF7 /* SceneDelegate.swift in Sources */,
 				ED22C67E273A1BAB00036CF7 /* SplashScreenViewController.swift in Sources */,
 				ED22C684273A301E00036CF7 /* WelcomeViewController.swift in Sources */,
+				ED800BB7275D01BA0003E315 /* Network.swift in Sources */,
 				ED22C682273A229500036CF7 /* HealthKitSupport.swift in Sources */,
 				ED22C68E273A3B2B00036CF7 /* EmptyDataBackgroundView.swift in Sources */,
+				ED800BB9275D06210003E315 /* ServerResponse.swift in Sources */,
 				ED22C68C273A3AA000036CF7 /* DataTypeTableViewCell.swift in Sources */,
 				ED22C690273A43A800036CF7 /* HealthKitSupport+String.swift in Sources */,
 				ED22C686273A380800036CF7 /* WeeklyQuantitySampleTableViewController.swift in Sources */,
