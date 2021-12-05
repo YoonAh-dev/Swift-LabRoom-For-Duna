@@ -15,7 +15,7 @@
 		ED22C680273A219500036CF7 /* HealthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C67F273A219500036CF7 /* HealthData.swift */; };
 		ED22C682273A229500036CF7 /* HealthKitSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C681273A229500036CF7 /* HealthKitSupport.swift */; };
 		ED22C684273A301E00036CF7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C683273A301E00036CF7 /* WelcomeViewController.swift */; };
-		ED22C686273A380800036CF7 /* WeeklyQuantitySampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C685273A380800036CF7 /* WeeklyQuantitySampleTableViewController.swift */; };
+		ED22C686273A380800036CF7 /* WeeklyDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C685273A380800036CF7 /* WeeklyDataTableViewController.swift */; };
 		ED22C688273A385000036CF7 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C687273A385000036CF7 /* DataTableViewController.swift */; };
 		ED22C68A273A396E00036CF7 /* HealthDataTypeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C689273A396E00036CF7 /* HealthDataTypeValue.swift */; };
 		ED22C68C273A3AA000036CF7 /* DataTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C68B273A3AA000036CF7 /* DataTypeTableViewCell.swift */; };
@@ -45,7 +45,7 @@
 		ED22C67F273A219500036CF7 /* HealthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthData.swift; sourceTree = "<group>"; };
 		ED22C681273A229500036CF7 /* HealthKitSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSupport.swift; sourceTree = "<group>"; };
 		ED22C683273A301E00036CF7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		ED22C685273A380800036CF7 /* WeeklyQuantitySampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyQuantitySampleTableViewController.swift; sourceTree = "<group>"; };
+		ED22C685273A380800036CF7 /* WeeklyDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyDataTableViewController.swift; sourceTree = "<group>"; };
 		ED22C687273A385000036CF7 /* DataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
 		ED22C689273A396E00036CF7 /* HealthDataTypeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataTypeValue.swift; sourceTree = "<group>"; };
 		ED22C68B273A3AA000036CF7 /* DataTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeTableViewCell.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 			children = (
 				ED22C67D273A1BAB00036CF7 /* SplashScreenViewController.swift */,
 				ED22C683273A301E00036CF7 /* WelcomeViewController.swift */,
-				ED22C685273A380800036CF7 /* WeeklyQuantitySampleTableViewController.swift */,
+				ED22C685273A380800036CF7 /* WeeklyDataTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -304,7 +304,7 @@
 				ED800BB9275D06210003E315 /* ServerResponse.swift in Sources */,
 				ED22C68C273A3AA000036CF7 /* DataTypeTableViewCell.swift in Sources */,
 				ED22C690273A43A800036CF7 /* HealthKitSupport+String.swift in Sources */,
-				ED22C686273A380800036CF7 /* WeeklyQuantitySampleTableViewController.swift in Sources */,
+				ED22C686273A380800036CF7 /* WeeklyDataTableViewController.swift in Sources */,
 				ED22C680273A219500036CF7 /* HealthData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

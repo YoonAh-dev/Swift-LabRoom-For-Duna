@@ -73,3 +73,47 @@ func createAnchorDate() -> Date {
     
     return anchorDate
 }
+
+func getLastWeekStartDate(from date: Date = Date()) -> Date {
+    return Calendar.current.date(byAdding: .day, value: -6, to: date)!
+}
+
+func createLastWeekPredicate(from endDate: Date = Date()) -> NSPredicate {
+    let startDate = getLastWeekStartDate(from: endDate)
+    return HKQuery.predicateForSamples(withStart: startDate, end: endDate)
+}
+
+func getStatisticsOptions(for dataTypeIdentifier: String) -> HKStatisticsOptions {
+    var options: HKStatisticsOptions = .discreteAverage
+    let sampleType = getSampleType(for: dataTypeIdentifier)
+    
+    if sampleType is HKQuantityType {
+        let quantityTypeIdentifier = HKQuantityTypeIdentifier(rawValue: dataTypeIdentifier)
+        
+        switch quantityTypeIdentifier {
+        case .stepCount, .distanceWalkingRunning:
+            options = .cumulativeSum
+        case .sixMinuteWalkTestDistance:
+            options = .discreteAverage
+        default:
+            break
+        }
+    }
+    
+    return options
+}
+
+func getStatisticsQuantity(for statistics: HKStatistics, with statisticsOptions: HKStatisticsOptions) -> HKQuantity? {
+    var statisticsQuantity: HKQuantity?
+    
+    switch statisticsOptions {
+    case .cumulativeSum:
+        statisticsQuantity = statistics.sumQuantity()
+    case .discreteAverage:
+        statisticsQuantity = statistics.averageQuantity()
+    default:
+        break
+    }
+    
+    return statisticsQuantity
+}
