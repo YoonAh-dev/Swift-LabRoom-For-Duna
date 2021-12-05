@@ -21,6 +21,7 @@
 		ED22C68C273A3AA000036CF7 /* DataTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C68B273A3AA000036CF7 /* DataTypeTableViewCell.swift */; };
 		ED22C68E273A3B2B00036CF7 /* EmptyDataBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C68D273A3B2B00036CF7 /* EmptyDataBackgroundView.swift */; };
 		ED22C690273A43A800036CF7 /* HealthKitSupport+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C68F273A43A800036CF7 /* HealthKitSupport+String.swift */; };
+		ED800BA6275CD8B60003E315 /* HealthDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BA5275CD8B60003E315 /* HealthDataTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		ED22C68B273A3AA000036CF7 /* DataTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeTableViewCell.swift; sourceTree = "<group>"; };
 		ED22C68D273A3B2B00036CF7 /* EmptyDataBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataBackgroundView.swift; sourceTree = "<group>"; };
 		ED22C68F273A43A800036CF7 /* HealthKitSupport+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthKitSupport+String.swift"; sourceTree = "<group>"; };
+		ED800BA5275CD8B60003E315 /* HealthDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				ED22C687273A385000036CF7 /* DataTableViewController.swift */,
+				ED800BA5275CD8B60003E315 /* HealthDataTableViewController.swift */,
 			);
 			path = "Table View Controller";
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				ED22C68A273A396E00036CF7 /* HealthDataTypeValue.swift in Sources */,
 				ED22C65F273974C400036CF7 /* AppDelegate.swift in Sources */,
 				ED22C688273A385000036CF7 /* DataTableViewController.swift in Sources */,
+				ED800BA6275CD8B60003E315 /* HealthDataTableViewController.swift in Sources */,
 				ED22C661273974C400036CF7 /* SceneDelegate.swift in Sources */,
 				ED22C67E273A1BAB00036CF7 /* SplashScreenViewController.swift in Sources */,
 				ED22C684273A301E00036CF7 /* WelcomeViewController.swift in Sources */,
