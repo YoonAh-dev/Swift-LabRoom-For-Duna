@@ -38,6 +38,7 @@
 		EDE0D0D9275DC14400F79076 /* FeedItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0D8275DC14400F79076 /* FeedItemCollectionViewCell.swift */; };
 		EDE0D0DB275E001500F79076 /* WeeklyReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0DA275E001500F79076 /* WeeklyReportTableViewController.swift */; };
 		EDE0D0DF275E04E000F79076 /* MockServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = EDE0D0DE275E04E000F79076 /* MockServerResponse.json */; };
+		EDE0D0E1275E051700F79076 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0E0275E051700F79076 /* MainTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		EDE0D0D8275DC14400F79076 /* FeedItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		EDE0D0DA275E001500F79076 /* WeeklyReportTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyReportTableViewController.swift; sourceTree = "<group>"; };
 		EDE0D0DE275E04E000F79076 /* MockServerResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockServerResponse.json; sourceTree = "<group>"; };
+		EDE0D0E0275E051700F79076 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 		ED22C678273976E300036CF7 /* Tab View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EDE0D0E0275E051700F79076 /* MainTabViewController.swift */,
 			);
 			path = "Tab View Controller";
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				ED22C684273A301E00036CF7 /* WelcomeViewController.swift in Sources */,
 				ED800BB7275D01BA0003E315 /* Network.swift in Sources */,
 				ED22C682273A229500036CF7 /* HealthKitSupport.swift in Sources */,
+				EDE0D0E1275E051700F79076 /* MainTabViewController.swift in Sources */,
 				EDE0D0D9275DC14400F79076 /* FeedItemCollectionViewCell.swift in Sources */,
 				ED22C68E273A3B2B00036CF7 /* EmptyDataBackgroundView.swift in Sources */,
 				ED800BB9275D06210003E315 /* ServerResponse.swift in Sources */,
