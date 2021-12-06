@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED3B53EF275E5F2D0028EB2D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3B53EE275E5F2D0028EB2D /* EditViewController.swift */; };
 		EDE0D0F5275E4E3300F79076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0F4275E4E3300F79076 /* AppDelegate.swift */; };
 		EDE0D0F7275E4E3300F79076 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0F6275E4E3300F79076 /* SceneDelegate.swift */; };
-		EDE0D0F9275E4E3300F79076 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0F8275E4E3300F79076 /* ViewController.swift */; };
+		EDE0D0F9275E4E3300F79076 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0F8275E4E3300F79076 /* RootViewController.swift */; };
 		EDE0D0FC275E4E3300F79076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE0D0FA275E4E3300F79076 /* Main.storyboard */; };
 		EDE0D0FE275E4E3400F79076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE0D0FD275E4E3400F79076 /* Assets.xcassets */; };
 		EDE0D101275E4E3400F79076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE0D0FF275E4E3400F79076 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED3B53EE275E5F2D0028EB2D /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		EDE0D0F1275E4E3300F79076 /* SheetPresentation-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SheetPresentation-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE0D0F4275E4E3300F79076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDE0D0F6275E4E3300F79076 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EDE0D0F8275E4E3300F79076 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDE0D0F8275E4E3300F79076 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		EDE0D0FB275E4E3300F79076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDE0D0FD275E4E3400F79076 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDE0D100275E4E3400F79076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +60,8 @@
 			children = (
 				EDE0D0F4275E4E3300F79076 /* AppDelegate.swift */,
 				EDE0D0F6275E4E3300F79076 /* SceneDelegate.swift */,
-				EDE0D0F8275E4E3300F79076 /* ViewController.swift */,
+				EDE0D0F8275E4E3300F79076 /* RootViewController.swift */,
+				ED3B53EE275E5F2D0028EB2D /* EditViewController.swift */,
 				EDE0D0FA275E4E3300F79076 /* Main.storyboard */,
 				EDE0D0FD275E4E3400F79076 /* Assets.xcassets */,
 				EDE0D0FF275E4E3400F79076 /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE0D0F9275E4E3300F79076 /* ViewController.swift in Sources */,
+				ED3B53EF275E5F2D0028EB2D /* EditViewController.swift in Sources */,
+				EDE0D0F9275E4E3300F79076 /* RootViewController.swift in Sources */,
 				EDE0D0F5275E4E3300F79076 /* AppDelegate.swift in Sources */,
 				EDE0D0F7275E4E3300F79076 /* SceneDelegate.swift in Sources */,
 			);
@@ -289,6 +293,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 633J345B62;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SheetPresentation-Example/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -316,6 +321,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 633J345B62;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SheetPresentation-Example/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

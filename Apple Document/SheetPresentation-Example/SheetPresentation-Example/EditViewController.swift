@@ -7,13 +7,49 @@
 
 import UIKit
 
+protocol EditViewControllerDelegate: AnyObject {
+    func editViewControllerDidCancel(_ editViewController: EditViewController)
+    func editViewControllerDidFinish(_ editViewController: EditViewController)
+}
+
 class EditViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    // MARK: - Model
+    
+    var originalText = "" {
+        didSet { editText = originalText}
     }
+    
+    var editText = "" {
+        didSet { viewIfLoaded?.setNeedsLayout()}
+    }
+    
+    var hasChanges: Bool {
+        return originalText != editText
+    }
+
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var textView: UITextView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        textView.becomeFirstResponder()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        textView.text = editText
+        
+        saveButton.isEnabled = hasChanges
+        isModalInPresentation = hasChanges
+    }
+    
+    // MARK: - Events
+    
+    
     
 
     /*
