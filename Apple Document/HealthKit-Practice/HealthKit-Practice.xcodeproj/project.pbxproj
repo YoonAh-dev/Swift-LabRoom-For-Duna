@@ -37,6 +37,7 @@
 		EDE0D0D7275D8EAC00F79076 /* UIApplication+Landscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0D6275D8EAC00F79076 /* UIApplication+Landscape.swift */; };
 		EDE0D0D9275DC14400F79076 /* FeedItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0D8275DC14400F79076 /* FeedItemCollectionViewCell.swift */; };
 		EDE0D0DB275E001500F79076 /* WeeklyReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0DA275E001500F79076 /* WeeklyReportTableViewController.swift */; };
+		EDE0D0DF275E04E000F79076 /* MockServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = EDE0D0DE275E04E000F79076 /* MockServerResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		EDE0D0D6275D8EAC00F79076 /* UIApplication+Landscape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Landscape.swift"; sourceTree = "<group>"; };
 		EDE0D0D8275DC14400F79076 /* FeedItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		EDE0D0DA275E001500F79076 /* WeeklyReportTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyReportTableViewController.swift; sourceTree = "<group>"; };
+		EDE0D0DE275E04E000F79076 /* MockServerResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockServerResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			children = (
 				ED22C67F273A219500036CF7 /* HealthData.swift */,
 				ED800BB6275D01BA0003E315 /* Network.swift */,
+				EDE0D0DE275E04E000F79076 /* MockServerResponse.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED22C66B273974C500036CF7 /* LaunchScreen.storyboard in Resources */,
+				EDE0D0DF275E04E000F79076 /* MockServerResponse.json in Resources */,
 				ED22C668273974C500036CF7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
