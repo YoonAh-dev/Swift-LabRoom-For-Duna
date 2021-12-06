@@ -36,6 +36,7 @@
 		EDE0D0D5275D7C9D00F79076 /* FeedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0D4275D7C9D00F79076 /* FeedItemViewController.swift */; };
 		EDE0D0D7275D8EAC00F79076 /* UIApplication+Landscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0D6275D8EAC00F79076 /* UIApplication+Landscape.swift */; };
 		EDE0D0D9275DC14400F79076 /* FeedItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0D8275DC14400F79076 /* FeedItemCollectionViewCell.swift */; };
+		EDE0D0DB275E001500F79076 /* WeeklyReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0DA275E001500F79076 /* WeeklyReportTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		EDE0D0D4275D7C9D00F79076 /* FeedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemViewController.swift; sourceTree = "<group>"; };
 		EDE0D0D6275D8EAC00F79076 /* UIApplication+Landscape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Landscape.swift"; sourceTree = "<group>"; };
 		EDE0D0D8275DC14400F79076 /* FeedItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		EDE0D0DA275E001500F79076 /* WeeklyReportTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyReportTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				ED22C683273A301E00036CF7 /* WelcomeViewController.swift */,
 				ED22C685273A380800036CF7 /* WeeklyDataTableViewController.swift */,
 				EDE0D0D1275D7C2100F79076 /* MobilityChartDataViewController.swift */,
+				EDE0D0DA275E001500F79076 /* WeeklyReportTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				ED800BB3275CFB1F0003E315 /* ChartViewStyle.swift in Sources */,
 				ED800BB5275CFF5D0003E315 /* HealthQueryTableViewController.swift in Sources */,
 				ED22C65F273974C400036CF7 /* AppDelegate.swift in Sources */,
+				EDE0D0DB275E001500F79076 /* WeeklyReportTableViewController.swift in Sources */,
 				ED800BBB275D0C3A0003E315 /* CareKitSupport.swift in Sources */,
 				EDE0D0D2275D7C2100F79076 /* MobilityChartDataViewController.swift in Sources */,
 				ED800BA8275CF3C30003E315 /* ChartTableViewController.swift in Sources */,
