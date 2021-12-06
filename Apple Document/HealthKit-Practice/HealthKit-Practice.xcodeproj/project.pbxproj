@@ -32,6 +32,10 @@
 		ED800BB7275D01BA0003E315 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BB6275D01BA0003E315 /* Network.swift */; };
 		ED800BB9275D06210003E315 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BB8275D06210003E315 /* ServerResponse.swift */; };
 		ED800BBB275D0C3A0003E315 /* CareKitSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BBA275D0C3A0003E315 /* CareKitSupport.swift */; };
+		EDE0D0D2275D7C2100F79076 /* MobilityChartDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0D1275D7C2100F79076 /* MobilityChartDataViewController.swift */; };
+		EDE0D0D5275D7C9D00F79076 /* FeedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0D4275D7C9D00F79076 /* FeedItemViewController.swift */; };
+		EDE0D0D7275D8EAC00F79076 /* UIApplication+Landscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0D6275D8EAC00F79076 /* UIApplication+Landscape.swift */; };
+		EDE0D0D9275DC14400F79076 /* FeedItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0D8275DC14400F79076 /* FeedItemCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +62,10 @@
 		ED800BB6275D01BA0003E315 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		ED800BB8275D06210003E315 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		ED800BBA275D0C3A0003E315 /* CareKitSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareKitSupport.swift; sourceTree = "<group>"; };
+		EDE0D0D1275D7C2100F79076 /* MobilityChartDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilityChartDataViewController.swift; sourceTree = "<group>"; };
+		EDE0D0D4275D7C9D00F79076 /* FeedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemViewController.swift; sourceTree = "<group>"; };
+		EDE0D0D6275D8EAC00F79076 /* UIApplication+Landscape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Landscape.swift"; sourceTree = "<group>"; };
+		EDE0D0D8275DC14400F79076 /* FeedItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +119,9 @@
 		ED22C672273976B000036CF7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				ED22C67D273A1BAB00036CF7 /* SplashScreenViewController.swift */,
 				ED22C683273A301E00036CF7 /* WelcomeViewController.swift */,
 				ED22C685273A380800036CF7 /* WeeklyDataTableViewController.swift */,
+				EDE0D0D1275D7C2100F79076 /* MobilityChartDataViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -122,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				ED22C68B273A3AA000036CF7 /* DataTypeTableViewCell.swift */,
+				EDE0D0D8275DC14400F79076 /* FeedItemCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -148,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				ED22C67A273976FA00036CF7 /* View */,
+				EDE0D0D3275D7C5900F79076 /* View Controller */,
 				ED22C679273976EB00036CF7 /* Table View Controller */,
 				ED22C678273976E300036CF7 /* Tab View Controller */,
 				ED22C677273976D700036CF7 /* Collection View Controller */,
@@ -158,6 +168,7 @@
 		ED22C677273976D700036CF7 /* Collection View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EDE0D0D4275D7C9D00F79076 /* FeedItemViewController.swift */,
 			);
 			path = "Collection View Controller";
 			sourceTree = "<group>";
@@ -195,6 +206,7 @@
 				ED22C681273A229500036CF7 /* HealthKitSupport.swift */,
 				ED22C68F273A43A800036CF7 /* HealthKitSupport+String.swift */,
 				ED800BBA275D0C3A0003E315 /* CareKitSupport.swift */,
+				EDE0D0D6275D8EAC00F79076 /* UIApplication+Landscape.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -206,6 +218,14 @@
 				ED22C66C273974C500036CF7 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDE0D0D3275D7C5900F79076 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED22C67D273A1BAB00036CF7 /* SplashScreenViewController.swift */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +312,7 @@
 				ED800BB5275CFF5D0003E315 /* HealthQueryTableViewController.swift in Sources */,
 				ED22C65F273974C400036CF7 /* AppDelegate.swift in Sources */,
 				ED800BBB275D0C3A0003E315 /* CareKitSupport.swift in Sources */,
+				EDE0D0D2275D7C2100F79076 /* MobilityChartDataViewController.swift in Sources */,
 				ED800BA8275CF3C30003E315 /* ChartTableViewController.swift in Sources */,
 				ED22C688273A385000036CF7 /* DataTableViewController.swift in Sources */,
 				ED800BA6275CD8B60003E315 /* HealthDataTableViewController.swift in Sources */,
@@ -300,12 +321,15 @@
 				ED22C684273A301E00036CF7 /* WelcomeViewController.swift in Sources */,
 				ED800BB7275D01BA0003E315 /* Network.swift in Sources */,
 				ED22C682273A229500036CF7 /* HealthKitSupport.swift in Sources */,
+				EDE0D0D9275DC14400F79076 /* FeedItemCollectionViewCell.swift in Sources */,
 				ED22C68E273A3B2B00036CF7 /* EmptyDataBackgroundView.swift in Sources */,
 				ED800BB9275D06210003E315 /* ServerResponse.swift in Sources */,
+				EDE0D0D7275D8EAC00F79076 /* UIApplication+Landscape.swift in Sources */,
 				ED22C68C273A3AA000036CF7 /* DataTypeTableViewCell.swift in Sources */,
 				ED22C690273A43A800036CF7 /* HealthKitSupport+String.swift in Sources */,
 				ED22C686273A380800036CF7 /* WeeklyDataTableViewController.swift in Sources */,
 				ED22C680273A219500036CF7 /* HealthData.swift in Sources */,
+				EDE0D0D5275D7C9D00F79076 /* FeedItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
