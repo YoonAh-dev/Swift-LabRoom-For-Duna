@@ -60,12 +60,16 @@ final class EditViewController: UIViewController {
     }
     
     // MARK: - @IBAction
-    
     @IBAction func cancel(_ sender: Any) {
-        hasChanges ? confirmCancel(showingSave: false) : delegate?.editViewControllerDidCancel(self)
+        delegate?.editViewControllerDidCancel(self)
     }
     
     @IBAction func save(_ sender: Any) {
+        if let sheet = navigationController?.sheetPresentationController {
+            sheet.animateChanges {
+                sheet.selectedDetentIdentifier = .medium
+            }
+        }
         delegate?.editViewControllerDidFinish(self)
     }
     

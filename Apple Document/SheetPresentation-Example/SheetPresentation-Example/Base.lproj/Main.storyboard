@@ -36,7 +36,7 @@
                     <navigationItem key="navigationItem" id="Yob-dw-giU">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="kmY-T6-pKm">
                             <connections>
-                                <segue destination="2ze-j2-DKr" kind="presentation" identifier="Edit" id="ld6-I4-G6M"/>
+                                <action selector="didClickEdit:" destination="BYZ-38-t0r" id="nJ0-zQ-aUc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -53,11 +53,11 @@
             <objects>
                 <viewController storyboardIdentifier="EditViewController" id="p0d-1a-eds" customClass="EditViewController" customModule="SheetPresentation_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="adp-MB-IXf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello world!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZP1-Fk-I3D">
-                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -74,9 +74,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WKe-wC-OmX">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wBa-VS-r82">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oTB-yN-zHd">
                             <connections>
-                                <action selector="cancel:" destination="p0d-1a-eds" id="DaW-UN-88t"/>
+                                <action selector="cancel:" destination="p0d-1a-eds" id="RCy-Xk-J0n"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ySd-aw-f7r">
@@ -86,7 +86,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cancelButton" destination="wBa-VS-r82" id="RmH-dI-Q8Z"/>
+                        <outlet property="cancelButton" destination="oTB-yN-zHd" id="a2n-xK-X9p"/>
                         <outlet property="saveButton" destination="ySd-aw-f7r" id="aGp-xv-gNb"/>
                         <outlet property="textView" destination="ZP1-Fk-I3D" id="cDW-Q4-ehv"/>
                     </connections>
@@ -116,10 +116,10 @@
         <!--Navigation Controller-->
         <scene sceneID="h7O-NE-hBl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2ze-j2-DKr" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Navi" automaticallyAdjustsScrollViewInsets="NO" id="2ze-j2-DKr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fcM-So-KN8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

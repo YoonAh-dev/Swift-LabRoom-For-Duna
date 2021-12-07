@@ -22,23 +22,6 @@ final class RootViewController: UIViewController, EditViewControllerDelegate {
     override func viewWillLayoutSubviews() {
         textView.text = text
     }
-
-    // MARK: - Segue
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "Edit":
-            let navigationController = segue.destination as! UINavigationController
-            let editViewController = navigationController.topViewController as! EditViewController
-            
-            navigationController.presentationController?.delegate = editViewController
-            
-            editViewController.delegate = self
-            editViewController.originalText = text
-        default:
-            break
-        }
-    }
     
     // MARK: - EditViewControllerDelegate
     
@@ -48,7 +31,23 @@ final class RootViewController: UIViewController, EditViewControllerDelegate {
     
     func editViewControllerDidFinish(_ editViewController: EditViewController) {
         text = editViewController.editText
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func didClickEdit(_ sender: Any) {
+        let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Navi")
+        let editViewController = navigationController.children.first as! EditViewController
+        
+        editViewController.delegate = self
+        editViewController.originalText = text
+        
+        if let sheet = navigationController.sheetPresentationController {
+            sheet.detents = [.medium(), .large()]
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.largestUndimmedDetentIdentifier = .medium
+        }
+        
+        present(navigationController, animated: true, completion: nil)
     }
 }
 
