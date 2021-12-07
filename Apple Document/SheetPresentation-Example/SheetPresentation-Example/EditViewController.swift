@@ -12,25 +12,37 @@ protocol EditViewControllerDelegate: AnyObject {
     func editViewControllerDidFinish(_ editViewController: EditViewController)
 }
 
-class EditViewController: UIViewController {
+final class EditViewController: UIViewController {
     
     // MARK: - Model
     
     var originalText = "" {
-        didSet { editText = originalText}
+        didSet { editText = originalText }
     }
     
     var editText = "" {
-        didSet { viewIfLoaded?.setNeedsLayout()}
+        didSet { viewIfLoaded?.setNeedsLayout() }
     }
     
     var hasChanges: Bool {
         return originalText != editText
     }
+    
+    // MARK: - Delegate
+    
+    weak var delegate: EditViewControllerDelegate?
+    
+    // MARK: - View
 
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var textView: UITextView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        textView.delegate = self
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -47,19 +59,49 @@ class EditViewController: UIViewController {
         isModalInPresentation = hasChanges
     }
     
-    // MARK: - Events
+    // MARK: - @IBAction
     
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func cancel(_ sender: Any) {
+        hasChanges ? confirmCancel(showingSave: false) : delegate?.editViewControllerDidCancel(self)
     }
-    */
+    
+    @IBAction func save(_ sender: Any) {
+        delegate?.editViewControllerDidFinish(self)
+    }
+    
+    // MARK: - Cancellation Confirmation
+    
+    func confirmCancel(showingSave: Bool) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        if showingSave {
+            alert.addAction(UIAlertAction(title: "Save", style: .default) { _ in
+                self.delegate?.editViewControllerDidFinish(self)
+            })
+        }
+        
+        alert.addAction(UIAlertAction(title: "Discard Changes", style: .destructive) { _ in
+            self.delegate?.editViewControllerDidCancel(self)
+        })
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        alert.popoverPresentationController?.barButtonItem = cancelButton
+        
+        present(alert, animated: true, completion: nil)
+    }
+}
 
+// MARK: - UITextViewDelegate
+extension EditViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        editText = textView.text
+    }
+}
+
+// MARK: - UIAdaptivePresentationControllerDelegate
+extension EditViewController: UIAdaptivePresentationControllerDelegate {
+    func presentationControllerDidAttemptToDismiss(_ presentationController: UIPresentationController) {
+        confirmCancel(showingSave: true)
+    }
 }

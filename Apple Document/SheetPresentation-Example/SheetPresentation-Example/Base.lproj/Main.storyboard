@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello World!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zxN-Ig-wQm">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Hello World!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zxN-Ig-wQm">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -34,10 +34,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yob-dw-giU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="kmY-T6-pKm"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="kmY-T6-pKm">
+                            <connections>
+                                <segue destination="2ze-j2-DKr" kind="presentation" identifier="Edit" id="ld6-I4-G6M"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="2ze-j2-DKr" kind="presentation" id="0rX-S0-u39"/>
+                        <outlet property="textView" destination="zxN-Ig-wQm" id="eAY-RC-iiU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -70,8 +74,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WKe-wC-OmX">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wBa-VS-r82"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ySd-aw-f7r"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wBa-VS-r82">
+                            <connections>
+                                <action selector="cancel:" destination="p0d-1a-eds" id="DaW-UN-88t"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ySd-aw-f7r">
+                            <connections>
+                                <action selector="save:" destination="p0d-1a-eds" id="RqY-LI-awo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="cancelButton" destination="wBa-VS-r82" id="RmH-dI-Q8Z"/>
