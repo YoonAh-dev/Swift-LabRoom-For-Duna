@@ -8,6 +8,7 @@
 import UIKit
 import SafariServices
 import UserNotifications
+import WebKit
 
 final class ViewController: UIViewController {
 
@@ -15,6 +16,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var memoLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    private let webView = WKWebView()
     private var notificationServices = 1
     private let italicFont = UIFont.italicSystemFont(ofSize: 18)
     private lazy var linkAttributes: [NSAttributedString.Key: Any] = [
@@ -71,6 +73,9 @@ final class ViewController: UIViewController {
     private func fixedLabelTapped(_ sender: UITapGestureRecognizer) {
         if let url = memoLabel.text {
             present(url: url)
+//            let vc = storyboard?.instantiateViewController(withIdentifier: "TestViewController") as! TestViewController
+//            vc.setData(url: url)
+//            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

@@ -12,6 +12,7 @@
 		ED2B950127808BEE0031DE49 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B94EC278040D60031DE49 /* ContentViewController.swift */; };
 		ED2B950227808BF00031DE49 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB9E22754A63000A517F1 /* ShareViewController.swift */; };
 		ED2B950327808BF30031DE49 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B94EC278040D60031DE49 /* ContentViewController.swift */; };
+		ED443E1E2780ABE50059DE76 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED443E1D2780ABE50059DE76 /* TestViewController.swift */; };
 		ED7BB9B02754A5F700A517F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB9AF2754A5F700A517F1 /* AppDelegate.swift */; };
 		ED7BB9B22754A5F700A517F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB9B12754A5F700A517F1 /* SceneDelegate.swift */; };
 		ED7BB9B42754A5F700A517F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB9B32754A5F700A517F1 /* ViewController.swift */; };
@@ -62,6 +63,7 @@
 /* Begin PBXFileReference section */
 		ED2B94E9278039320031DE49 /* BetweenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetweenViewController.swift; sourceTree = "<group>"; };
 		ED2B94EC278040D60031DE49 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		ED443E1D2780ABE50059DE76 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		ED7BB9AC2754A5F700A517F1 /* Action-Extension-Shared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Action-Extension-Shared.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7BB9AF2754A5F700A517F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED7BB9B12754A5F700A517F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				ED7BB9AF2754A5F700A517F1 /* AppDelegate.swift */,
 				ED7BB9B12754A5F700A517F1 /* SceneDelegate.swift */,
 				ED7BB9B32754A5F700A517F1 /* ViewController.swift */,
+				ED443E1D2780ABE50059DE76 /* TestViewController.swift */,
 			);
 			path = "Action-Extension-Shared";
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				ED7BB9B42754A5F700A517F1 /* ViewController.swift in Sources */,
 				ED7BB9B02754A5F700A517F1 /* AppDelegate.swift in Sources */,
 				ED2B950027808BEB0031DE49 /* ShareViewController.swift in Sources */,
+				ED443E1E2780ABE50059DE76 /* TestViewController.swift in Sources */,
 				ED7BB9B22754A5F700A517F1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
