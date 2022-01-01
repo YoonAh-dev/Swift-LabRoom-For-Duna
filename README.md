@@ -10,6 +10,7 @@
 |Typing Animation|21/08/07|[⌨️](https://github.com/YoonAh-dev/Swift-LabRoom-For-Duna/tree/main/advanced/TypingAnimationTest)| - 게임처럼 Typing되는 애니메이션 구현<br/> - DispatchQueue 사용해서 구현 <br/>
 |Local Notification|21/11/25|[🕰](https://github.com/YoonAh-dev/Swift-LabRoom-For-Duna/tree/main/advanced/LocalNotification)| - Local Notification 구현 앱 <br/> - UserNotifications를 임포트해서 로컬알림 구현 <br/> - [Example Page](https://onelife2live.tistory.com/33) <br/>
 |ReSwift|21/12/03|[➡](https://github.com/YoonAh-dev/Swift-LabRoom-For-Duna/tree/main/advanced/Counting-ReSwift)| - [ReSwift](https://github.com/ReSwift/ReSwift) 라이브러리를 사용해서 단방향 데이터 흐름 구현 <br/> - 버튼을 누르면 숫자가 올라가고 내려가는 간단한 앱 <br/> - [ReSwift에서 제공해주는 CounterExample](https://github.com/ReSwift/CounterExample) <br/>
+|Action-Extension-Shared|22/01/01|[🤲](https://github.com/YoonAh-dev/Swift-LabRoom-For-Duna/tree/main/advanced/Action-Extension-Shared)| - Share Extension를 사용해서 Main App에 사파리 URL관련 정보를 가져오기 <br/> - group bundle Id를 사용해서 UserDefault를 AppGroup간에 가능하도록 구현 <br/> - 내부 앱에서 링크를 누르면 SFSafariViewController를 통해서 이동<br/> - 정보가 저장되었을 시 내부알림 전송<br/>
 
 ### Apple Document Example
 | feature |date |link |description |
