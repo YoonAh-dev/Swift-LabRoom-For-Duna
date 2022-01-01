@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         requestNotificationAuthorization()
-        sendNotification(seconds: 10)
+        sendNotification(seconds: 5)
     }
 
     /// 사용자에게 알림 권한을 요청
@@ -35,8 +35,8 @@ class ViewController: UIViewController {
     func sendNotification(seconds: Double) {
         let notificationContent = UNMutableNotificationContent()
         
-        notificationContent.title = "알림 테스트"
-        notificationContent.body = "이것은 알림을 테스트 하는 것이다."
+        notificationContent.title = "로컬 알림"
+        notificationContent.body = "띠링띠링 알림이 도착했습니다!"
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
         let request = UNNotificationRequest(identifier: "test",

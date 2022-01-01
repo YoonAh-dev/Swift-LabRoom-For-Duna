@@ -23,15 +23,15 @@
 		ED22C690273A43A800036CF7 /* HealthKitSupport+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22C68F273A43A800036CF7 /* HealthKitSupport+String.swift */; };
 		ED800BA6275CD8B60003E315 /* HealthDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BA5275CD8B60003E315 /* HealthDataTableViewController.swift */; };
 		ED800BA8275CF3C30003E315 /* ChartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BA7275CF3C30003E315 /* ChartTableViewController.swift */; };
-		ED800BAB275CF6820003E315 /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = ED800BAA275CF6820003E315 /* CareKit */; };
-		ED800BAD275CF6820003E315 /* CareKitFHIR in Frameworks */ = {isa = PBXBuildFile; productRef = ED800BAC275CF6820003E315 /* CareKitFHIR */; };
-		ED800BAF275CF6820003E315 /* CareKitStore in Frameworks */ = {isa = PBXBuildFile; productRef = ED800BAE275CF6820003E315 /* CareKitStore */; };
-		ED800BB1275CF6820003E315 /* CareKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = ED800BB0275CF6820003E315 /* CareKitUI */; };
 		ED800BB3275CFB1F0003E315 /* ChartViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BB2275CFB1F0003E315 /* ChartViewStyle.swift */; };
 		ED800BB5275CFF5D0003E315 /* HealthQueryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BB4275CFF5D0003E315 /* HealthQueryTableViewController.swift */; };
 		ED800BB7275D01BA0003E315 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BB6275D01BA0003E315 /* Network.swift */; };
 		ED800BB9275D06210003E315 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BB8275D06210003E315 /* ServerResponse.swift */; };
 		ED800BBB275D0C3A0003E315 /* CareKitSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED800BBA275D0C3A0003E315 /* CareKitSupport.swift */; };
+		EDA7CE1D276B9AF300BF1D48 /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = EDA7CE1C276B9AF300BF1D48 /* CareKit */; };
+		EDA7CE1F276B9AF300BF1D48 /* CareKitFHIR in Frameworks */ = {isa = PBXBuildFile; productRef = EDA7CE1E276B9AF300BF1D48 /* CareKitFHIR */; };
+		EDA7CE21276B9AF300BF1D48 /* CareKitStore in Frameworks */ = {isa = PBXBuildFile; productRef = EDA7CE20276B9AF300BF1D48 /* CareKitStore */; };
+		EDA7CE23276B9AF300BF1D48 /* CareKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = EDA7CE22276B9AF300BF1D48 /* CareKitUI */; };
 		EDE0D0D2275D7C2100F79076 /* MobilityChartDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0D1275D7C2100F79076 /* MobilityChartDataViewController.swift */; };
 		EDE0D0D5275D7C9D00F79076 /* FeedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0D4275D7C9D00F79076 /* FeedItemViewController.swift */; };
 		EDE0D0D7275D8EAC00F79076 /* UIApplication+Landscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D0D6275D8EAC00F79076 /* UIApplication+Landscape.swift */; };
@@ -84,10 +84,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED800BAB275CF6820003E315 /* CareKit in Frameworks */,
-				ED800BAD275CF6820003E315 /* CareKitFHIR in Frameworks */,
-				ED800BB1275CF6820003E315 /* CareKitUI in Frameworks */,
-				ED800BAF275CF6820003E315 /* CareKitStore in Frameworks */,
+				EDA7CE21276B9AF300BF1D48 /* CareKitStore in Frameworks */,
+				EDA7CE1D276B9AF300BF1D48 /* CareKit in Frameworks */,
+				EDA7CE23276B9AF300BF1D48 /* CareKitUI in Frameworks */,
+				EDA7CE1F276B9AF300BF1D48 /* CareKitFHIR in Frameworks */,
 				EDE0D0E7275E0C1100F79076 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,10 +271,10 @@
 			);
 			name = "HealthKit-Practice";
 			packageProductDependencies = (
-				ED800BAA275CF6820003E315 /* CareKit */,
-				ED800BAC275CF6820003E315 /* CareKitFHIR */,
-				ED800BAE275CF6820003E315 /* CareKitStore */,
-				ED800BB0275CF6820003E315 /* CareKitUI */,
+				EDA7CE1C276B9AF300BF1D48 /* CareKit */,
+				EDA7CE1E276B9AF300BF1D48 /* CareKitFHIR */,
+				EDA7CE20276B9AF300BF1D48 /* CareKitStore */,
+				EDA7CE22276B9AF300BF1D48 /* CareKitUI */,
 			);
 			productName = "HealthKit-Practice";
 			productReference = ED22C65B273974C400036CF7 /* HealthKit-Practice.app */;
@@ -305,7 +305,7 @@
 			);
 			mainGroup = ED22C652273974C400036CF7;
 			packageReferences = (
-				ED800BA9275CF6820003E315 /* XCRemoteSwiftPackageReference "CareKit" */,
+				EDA7CE1B276B9AF300BF1D48 /* XCRemoteSwiftPackageReference "CareKit" */,
 			);
 			productRefGroup = ED22C65C273974C400036CF7 /* Products */;
 			projectDirPath = "";
@@ -577,7 +577,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ED800BA9275CF6820003E315 /* XCRemoteSwiftPackageReference "CareKit" */ = {
+		EDA7CE1B276B9AF300BF1D48 /* XCRemoteSwiftPackageReference "CareKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/carekit-apple/CareKit";
 			requirement = {
@@ -588,24 +588,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ED800BAA275CF6820003E315 /* CareKit */ = {
+		EDA7CE1C276B9AF300BF1D48 /* CareKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ED800BA9275CF6820003E315 /* XCRemoteSwiftPackageReference "CareKit" */;
+			package = EDA7CE1B276B9AF300BF1D48 /* XCRemoteSwiftPackageReference "CareKit" */;
 			productName = CareKit;
 		};
-		ED800BAC275CF6820003E315 /* CareKitFHIR */ = {
+		EDA7CE1E276B9AF300BF1D48 /* CareKitFHIR */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ED800BA9275CF6820003E315 /* XCRemoteSwiftPackageReference "CareKit" */;
+			package = EDA7CE1B276B9AF300BF1D48 /* XCRemoteSwiftPackageReference "CareKit" */;
 			productName = CareKitFHIR;
 		};
-		ED800BAE275CF6820003E315 /* CareKitStore */ = {
+		EDA7CE20276B9AF300BF1D48 /* CareKitStore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ED800BA9275CF6820003E315 /* XCRemoteSwiftPackageReference "CareKit" */;
+			package = EDA7CE1B276B9AF300BF1D48 /* XCRemoteSwiftPackageReference "CareKit" */;
 			productName = CareKitStore;
 		};
-		ED800BB0275CF6820003E315 /* CareKitUI */ = {
+		EDA7CE22276B9AF300BF1D48 /* CareKitUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ED800BA9275CF6820003E315 /* XCRemoteSwiftPackageReference "CareKit" */;
+			package = EDA7CE1B276B9AF300BF1D48 /* XCRemoteSwiftPackageReference "CareKit" */;
 			productName = CareKitUI;
 		};
 /* End XCSwiftPackageProductDependency section */
