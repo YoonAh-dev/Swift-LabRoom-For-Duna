@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NSCache_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="unD-xR-RWg">
+                                <rect key="frame" x="10" y="94" width="394" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="iko-4M-NZB"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pHJ-9H-JgD">
+                                <rect key="frame" x="10" y="324" width="394" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="183-gb-wVE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVu-Ph-Aym">
+                                <rect key="frame" x="141" y="624" width="132" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Image Download"/>
+                                <connections>
+                                    <action selector="touchUpDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ouf-QE-BxN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhb-cs-smd">
+                                <rect key="frame" x="179" y="675" width="56" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="clear"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="atA-Fr-gUt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="unD-xR-RWg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="47I-B5-lQB"/>
+                            <constraint firstItem="pHJ-9H-JgD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="O1Y-lU-BLZ"/>
+                            <constraint firstItem="UVu-Ph-Aym" firstAttribute="top" secondItem="pHJ-9H-JgD" secondAttribute="bottom" constant="100" id="UXr-vi-eUX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="unD-xR-RWg" secondAttribute="trailing" constant="10" id="Y93-z2-eOY"/>
+                            <constraint firstItem="pHJ-9H-JgD" firstAttribute="top" secondItem="unD-xR-RWg" secondAttribute="bottom" constant="30" id="gGL-19-0vy"/>
+                            <constraint firstItem="unD-xR-RWg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="gof-HD-9bO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pHJ-9H-JgD" secondAttribute="trailing" constant="10" id="iq6-bq-KVu"/>
+                            <constraint firstItem="yhb-cs-smd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kkL-ba-4OW"/>
+                            <constraint firstItem="UVu-Ph-Aym" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mZT-No-xMp"/>
+                            <constraint firstItem="yhb-cs-smd" firstAttribute="top" secondItem="UVu-Ph-Aym" secondAttribute="bottom" constant="20" id="uGp-j0-Hvm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hyungyuImageView" destination="unD-xR-RWg" id="rFL-p3-1Ha"/>
+                        <outlet property="inaeImageView" destination="pHJ-9H-JgD" id="R1B-eH-lvX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="106"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
