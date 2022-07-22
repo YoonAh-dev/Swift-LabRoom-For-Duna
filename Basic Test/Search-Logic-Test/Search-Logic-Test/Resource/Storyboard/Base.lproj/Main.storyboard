@@ -25,14 +25,22 @@
                                 <rect key="frame" x="0.0" y="138" width="414" height="758"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDb-F9-jfU">
+                                <rect key="frame" x="30" y="69" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pzw-AC-gKq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="2q3-sM-NoI"/>
+                            <constraint firstItem="iDb-F9-jfU" firstAttribute="leading" secondItem="pzw-AC-gKq" secondAttribute="leading" id="852-IS-dj9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vnr-XQ-pNz" secondAttribute="trailing" id="Dca-Vk-7EF"/>
                             <constraint firstItem="pzw-AC-gKq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="LQ1-39-XsP"/>
                             <constraint firstItem="vnr-XQ-pNz" firstAttribute="top" secondItem="pzw-AC-gKq" secondAttribute="bottom" constant="10" id="Lbn-QY-ssu"/>
+                            <constraint firstItem="pzw-AC-gKq" firstAttribute="top" secondItem="iDb-F9-jfU" secondAttribute="bottom" constant="4" id="UEa-JP-yBR"/>
                             <constraint firstItem="pzw-AC-gKq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k39-aS-jDZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pzw-AC-gKq" secondAttribute="trailing" constant="30" id="srz-Bi-0YV"/>
                             <constraint firstItem="vnr-XQ-pNz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uTF-5R-Myx"/>
@@ -42,6 +50,7 @@
                     <connections>
                         <outlet property="tableView" destination="vnr-XQ-pNz" id="Ons-Vv-RLf"/>
                         <outlet property="textField" destination="pzw-AC-gKq" id="wUl-lF-WW6"/>
+                        <outlet property="timeLabel" destination="iDb-F9-jfU" id="0C0-h6-Mt5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

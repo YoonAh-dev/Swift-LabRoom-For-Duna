@@ -18,6 +18,7 @@
 		B5B05D1A288A86EC0013E65F /* MockParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B05D19288A86EC0013E65F /* MockParser.swift */; };
 		B5B05D1E288A8B930013E65F /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B05D1D288A8B930013E65F /* StoreModel.swift */; };
 		B5B05D1F288A8EA90013E65F /* Store.json in Resources */ = {isa = PBXBuildFile; fileRef = B5B05D1B288A872F0013E65F /* Store.json */; };
+		B5B05D22288AB87B0013E65F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B05D21288AB87B0013E65F /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B5B05D19288A86EC0013E65F /* MockParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockParser.swift; sourceTree = "<group>"; };
 		B5B05D1B288A872F0013E65F /* Store.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Store.json; sourceTree = "<group>"; };
 		B5B05D1D288A8B930013E65F /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
+		B5B05D21288AB87B0013E65F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		B504716A288A831000F5BEBA /* Search-Logic-Test */ = {
 			isa = PBXGroup;
 			children = (
+				B5B05D20288AB7E10013E65F /* Extension */,
 				B5B05D1C288A8B890013E65F /* Model */,
 				B5B05D18288A86CD0013E65F /* Mock */,
 				B5B05D16288A86A20013E65F /* Resource */,
@@ -128,6 +131,14 @@
 				B5B05D1D288A8B930013E65F /* StoreModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B5B05D20288AB7E10013E65F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B5B05D21288AB87B0013E65F /* Date+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 				B5B05D12288A85C70013E65F /* SearchTableViewCell.swift in Sources */,
 				B504716C288A831000F5BEBA /* AppDelegate.swift in Sources */,
 				B5B05D1A288A86EC0013E65F /* MockParser.swift in Sources */,
+				B5B05D22288AB87B0013E65F /* Date+Extension.swift in Sources */,
 				B504716E288A831000F5BEBA /* SceneDelegate.swift in Sources */,
 				B5B05D1E288A8B930013E65F /* StoreModel.swift in Sources */,
 			);

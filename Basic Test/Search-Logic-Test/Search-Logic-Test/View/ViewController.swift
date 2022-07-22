@@ -11,6 +11,7 @@ final class ViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var timeLabel: UILabel!
     
     var storeData: [Store] = []
     var filteredStoreData: [Store] = []
@@ -20,6 +21,7 @@ final class ViewController: UIViewController {
         setDelegation()
         setTableView()
         parseStoreData()
+        compareBetweenCurrentAndOfficeHour()
     }
     
     private func setDelegation() {
@@ -37,6 +39,28 @@ final class ViewController: UIViewController {
         if let data = storeModel?.data {
             storeData = data
         }
+    }
+    
+    private func compareBetweenCurrentAndOfficeHour() {
+        let currentTime = calculateTime(Date.getCurrentDate(with: "HH:mm"))
+        let officeHours = storeData[1].getTodayOfficeHour()?.components(separatedBy: " - ")
+        guard let startOfficeTime = officeHours?[0],
+              let endOfficeTime = officeHours?[1] else { return }
+        let officeRange: ClosedRange = calculateTime(startOfficeTime)...calculateTime(endOfficeTime)
+        
+        if officeRange.contains(currentTime) {
+            timeLabel.text = "영업 중"
+        } else {
+            timeLabel.text = "영업 종료"
+        }
+    }
+    
+    private func calculateTime(_ time: String) -> Int {
+        let times = time.components(separatedBy: ":")
+        guard let hour = Int(times[0]),
+              let minute = Int(times[1]) else { return 0 }
+        
+        return hour * 60 + minute
     }
 }
 
