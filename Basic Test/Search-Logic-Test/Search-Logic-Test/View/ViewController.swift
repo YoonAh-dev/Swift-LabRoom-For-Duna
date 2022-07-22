@@ -49,11 +49,11 @@ final class ViewController: UIViewController {
 
 extension ViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        if let keyword = textField.text {
+        if let keyword = textField.text?.removingWhitespaces() {
             filteredStoreData = storeData.filter({ data -> Bool in
-                let storeNameFilter = data.name.lowercased().contains(keyword.lowercased())
-                let itemNameFilter = data.items.map({ $0.name }).contains(where: { $0.contains(keyword.lowercased()) })
-                let categoryFilter = data.items.map({ $0.category }).contains(where: { $0.contains(keyword.lowercased()) })
+                let storeNameFilter = data.name.removingWhitespaces().lowercased().contains(keyword.lowercased())
+                let itemNameFilter = data.items.map({ $0.name }).contains(where: { $0.removingWhitespaces().contains(keyword.lowercased()) })
+                let categoryFilter = data.items.map({ $0.category }).contains(where: { $0.removingWhitespaces().contains(keyword.lowercased()) })
                 return storeNameFilter || itemNameFilter || categoryFilter
             })
             tableView.reloadData()
