@@ -69,6 +69,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
         cell.setKeywordLabel(with: filteredStoreData[indexPath.row].name)
+        cell.setTimeLabel(with: filteredStoreData[indexPath.row])
         return cell
     }
 }

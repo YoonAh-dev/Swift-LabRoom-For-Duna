@@ -22,15 +22,24 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUq-4A-tCs">
+                        <rect key="frame" x="262" y="11.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="H0K-1Q-P4d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="HbI-vW-d8A"/>
+                    <constraint firstItem="RUq-4A-tCs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Hgp-0e-Wpd"/>
+                    <constraint firstAttribute="trailing" secondItem="RUq-4A-tCs" secondAttribute="trailing" constant="16" id="p9r-p7-bHs"/>
                     <constraint firstItem="H0K-1Q-P4d" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uqK-ns-qhQ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="keywordLabel" destination="H0K-1Q-P4d" id="mDe-38-vQg"/>
+                <outlet property="timeLabel" destination="RUq-4A-tCs" id="5ua-sw-bEc"/>
             </connections>
             <point key="canvasLocation" x="139" y="121"/>
         </tableViewCell>

@@ -10,6 +10,7 @@ import UIKit
 class SearchTableViewCell: UITableViewCell {
 
     @IBOutlet weak var keywordLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,5 +22,10 @@ class SearchTableViewCell: UITableViewCell {
     
     func setKeywordLabel(with keyword: String) {
         keywordLabel.text = keyword
+    }
+    
+    func setTimeLabel(with store: Store) {
+        timeLabel.text = store.getOfficeHourState().title
+        timeLabel.textColor = store.getOfficeHourState().titleColor
     }
 }
