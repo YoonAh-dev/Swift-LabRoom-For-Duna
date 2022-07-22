@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var hyungyuImageView: UIImageView!
     @IBOutlet weak var inaeImageView: UIImageView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hyungyuImageView.backgroundColor = .black
@@ -19,7 +20,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchUpDownload(_ sender: Any) {
-        let hyungyuURL = "https://avatars.githubusercontent.com/u/69136340?v=4"
+        let hyungyuURL = "https://images.unsplash.com/photo-1655769135684-e35826d4859d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3087&q=80"
         hyungyuImageView.loadImageUrl(hyungyuURL)
         
         let inaeURL = URL(string: "https://avatars.githubusercontent.com/u/26399850?v=4")

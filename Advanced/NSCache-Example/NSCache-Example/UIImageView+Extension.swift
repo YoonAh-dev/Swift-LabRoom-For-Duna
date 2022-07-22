@@ -12,6 +12,8 @@ extension UIImageView {
         DispatchQueue.global(qos: .background).async {
             let cachedKey = NSString(string: url)
             
+            ImageCacheManager.shared.totalCostLimit = 50_000_000
+            
             if let cachedImage = ImageCacheManager.shared.object(forKey: cachedKey) {
                 DispatchQueue.main.async {
                     self.image = cachedImage
