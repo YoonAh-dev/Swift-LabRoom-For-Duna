@@ -5,7 +5,7 @@
 //  Created by SHIN YOON AH on 2022/07/22.
 //
 
-import Foundation
+import UIKit
 
 // MARK: - StoreModel
 struct StoreModel: Codable {
@@ -21,6 +21,51 @@ struct Store: Codable {
         case name
         case officeHour = "office_hour"
         case items
+    }
+    
+    enum OfficeHourType {
+        case open
+        case close
+        case holiday
+        case none
+        
+        var title: String {
+            switch self {
+            case .open:
+                return "영업 중"
+            case .close:
+                return "영업 종료"
+            case .holiday:
+                return "정기 휴무"
+            case .none:
+                return "문제 발생"
+            }
+        }
+        
+        var titleColor: UIColor {
+            switch self {
+            case .open:
+                return .green
+            case .close:
+                return .red
+            case .holiday:
+                return .black
+            case .none:
+                return .gray
+            }
+        }
+    }
+    
+    func getOfficeHourState() -> OfficeHourType {
+        let currentTime = calculateTimeToInt(Date.getCurrentDate(with: "HH:mm"))
+        guard let isIncludedInOfficeHour = getOfficeRange()?.contains(currentTime) else {
+            if let officeHour = getTodayOfficeHour(), officeHour == "정기휴무" {
+                return .holiday
+            }
+            return .none
+        }
+        
+        return isIncludedInOfficeHour ? .open : .close
     }
     
     func getTodayOfficeHour() -> String? {
@@ -46,10 +91,11 @@ struct Store: Codable {
         }
     }
     
-    func getOfficeRange() -> ClosedRange<Int> {
+    func getOfficeRange() -> ClosedRange<Int>? {
+        guard getTodayOfficeHour() != "정기휴무" else { return nil }
         let officeHours = getTodayOfficeHour()?.components(separatedBy: " - ")
         guard let startOfficeTime = officeHours?[0],
-              let endOfficeTime = officeHours?[1] else { return 0...0 }
+              let endOfficeTime = officeHours?[1] else { return nil }
         let officeRange: ClosedRange = calculateTimeToInt(startOfficeTime)...calculateTimeToInt(endOfficeTime)
         
         return officeRange

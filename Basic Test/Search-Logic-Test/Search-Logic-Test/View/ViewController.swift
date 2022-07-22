@@ -21,7 +21,7 @@ final class ViewController: UIViewController {
         setDelegation()
         setTableView()
         parseStoreData()
-        compareBetweenCurrentAndOfficeHour()
+        setOfficeHourLabel()
     }
     
     private func setDelegation() {
@@ -41,21 +41,9 @@ final class ViewController: UIViewController {
         }
     }
     
-    private func compareBetweenCurrentAndOfficeHour() {
-        let currentTime = calculateTimeToInt(Date.getCurrentDate(with: "HH:mm"))
-        let officeRange = storeData[2].getOfficeRange()
-        let isIncludedInOfficeHour = officeRange.contains(currentTime)
-        
-        timeLabel.text = isIncludedInOfficeHour ? "영업 중" :  "영업 종료"
-        timeLabel.textColor = isIncludedInOfficeHour ? .green : .red
-    }
-    
-    private func calculateTimeToInt(_ time: String) -> Int {
-        let times = time.components(separatedBy: ":")
-        guard let hour = Int(times[0]),
-              let minute = Int(times[1]) else { return 0 }
-        
-        return hour * 60 + minute
+    private func setOfficeHourLabel() {
+        timeLabel.text = storeData[2].getOfficeHourState().title
+        timeLabel.textColor = storeData[2].getOfficeHourState().titleColor
     }
 }
 
