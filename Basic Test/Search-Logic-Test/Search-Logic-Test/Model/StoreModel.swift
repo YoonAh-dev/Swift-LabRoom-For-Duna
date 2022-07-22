@@ -45,6 +45,23 @@ struct Store: Codable {
             return nil
         }
     }
+    
+    func getOfficeRange() -> ClosedRange<Int> {
+        let officeHours = getTodayOfficeHour()?.components(separatedBy: " - ")
+        guard let startOfficeTime = officeHours?[0],
+              let endOfficeTime = officeHours?[1] else { return 0...0 }
+        let officeRange: ClosedRange = calculateTimeToInt(startOfficeTime)...calculateTimeToInt(endOfficeTime)
+        
+        return officeRange
+    }
+    
+    private func calculateTimeToInt(_ time: String) -> Int {
+        let times = time.components(separatedBy: ":")
+        guard let hour = Int(times[0]),
+              let minute = Int(times[1]) else { return 0 }
+        
+        return hour * 60 + minute
+    }
 }
 
 struct Item: Codable {

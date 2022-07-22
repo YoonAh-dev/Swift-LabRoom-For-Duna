@@ -42,20 +42,15 @@ final class ViewController: UIViewController {
     }
     
     private func compareBetweenCurrentAndOfficeHour() {
-        let currentTime = calculateTime(Date.getCurrentDate(with: "HH:mm"))
-        let officeHours = storeData[1].getTodayOfficeHour()?.components(separatedBy: " - ")
-        guard let startOfficeTime = officeHours?[0],
-              let endOfficeTime = officeHours?[1] else { return }
-        let officeRange: ClosedRange = calculateTime(startOfficeTime)...calculateTime(endOfficeTime)
+        let currentTime = calculateTimeToInt(Date.getCurrentDate(with: "HH:mm"))
+        let officeRange = storeData[2].getOfficeRange()
+        let isIncludedInOfficeHour = officeRange.contains(currentTime)
         
-        if officeRange.contains(currentTime) {
-            timeLabel.text = "영업 중"
-        } else {
-            timeLabel.text = "영업 종료"
-        }
+        timeLabel.text = isIncludedInOfficeHour ? "영업 중" :  "영업 종료"
+        timeLabel.textColor = isIncludedInOfficeHour ? .green : .red
     }
     
-    private func calculateTime(_ time: String) -> Int {
+    private func calculateTimeToInt(_ time: String) -> Int {
         let times = time.components(separatedBy: ":")
         guard let hour = Int(times[0]),
               let minute = Int(times[1]) else { return 0 }
